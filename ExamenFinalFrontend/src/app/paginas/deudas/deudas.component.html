@@ -1,0 +1,38 @@
+<p>Deudas</p>
+<form>
+  <table>
+    <tr>
+      <td>DNI</td>
+      <td><input type="text" name="txtDni" [(ngModel)]="dni"></td>
+    </tr>
+  </table>
+  <button (click)='buscar()'>Buscar</button>
+</form>
+
+<hr/>
+
+<label>{{persona.id}}</label><br>
+<label>{{persona.dni}}</label><br>
+<label>{{persona.nombre}}</label><br>
+<label>{{persona.direccion}}</label><br>
+
+<!--
+<div *ngFor='let per of personas'>
+  <label>{{per.id}}</label>
+  <label>{{per.dni}}</label>
+  <label>{{per.nombre}}</label>
+</div>
+-->
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Mes</th>
+    <th>Valor</th>
+  </tr>
+  <tr *ngFor='let deu of deudas'>
+    <td>{{deu.id}}</td>
+    <td>{{deu.mes}}</td>
+    <td>{{deu.valor}}</td>
+  </tr>
+</table>
+
